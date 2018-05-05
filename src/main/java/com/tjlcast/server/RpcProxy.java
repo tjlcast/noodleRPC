@@ -22,7 +22,7 @@ public class RpcProxy {
     }
 
     @SuppressWarnings("unchecked")
-    public<T> T create(Class<?> interfaceClass) {
+    public<T> T create(Class<T> interfaceClass) {
         return (T) Proxy.newProxyInstance(
                 interfaceClass.getClassLoader(),
                 new Class<?>[]{interfaceClass},
