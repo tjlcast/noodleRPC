@@ -62,9 +62,9 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
                                 @Override
                                 protected void initChannel(SocketChannel socketChannel) throws Exception {
                                     socketChannel.pipeline()
-                                            .addLast(null) // todo
-                                            .addLast(null) // todo
-                                            .addLast(null) ; // todo
+                                            .addLast(new RpcDecoder(RpcRequest.class))
+                                            .addLast(new RpcEncoder(RpcResponse.class))
+                                            .addLast(new RpcHandler(handlerMap)) ;
                                 }
                             }
                     )
