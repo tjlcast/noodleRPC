@@ -37,7 +37,7 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
 
     @Override
     public void setApplicationContext(ApplicationContext applicationContext) throws BeansException {
-        // 得到所有RpcService注解的SpringBean
+        // 得到所有RpcService注解的Spring - Bean
         Map<String, Object> beansWithAnnotation = applicationContext.getBeansWithAnnotation(RpcService.class);
         if (MapUtils.isNotEmpty(beansWithAnnotation)) {
             for (Object serviceBean : beansWithAnnotation.values()) {
@@ -50,6 +50,7 @@ public class RpcServer implements ApplicationContextAware, InitializingBean {
     @Override
     public void afterPropertiesSet() throws Exception {
         // init and run netty.
+        // 在属性设定结束后，开启netty的网络。
         NioEventLoopGroup bossGroup = new NioEventLoopGroup();
         NioEventLoopGroup workerGroup = new NioEventLoopGroup();
 

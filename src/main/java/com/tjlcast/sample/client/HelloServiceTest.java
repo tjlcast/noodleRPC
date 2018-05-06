@@ -1,6 +1,6 @@
-package com.tjlcast.demo.client;
+package com.tjlcast.sample.client;
 
-import com.tjlcast.demo.common.HelloService;
+import com.tjlcast.sample.common.HelloService;
 import com.tjlcast.server.RpcProxy;
 import org.springframework.beans.factory.annotation.Autowired;
 

@@ -1,4 +1,4 @@
-package com.tjlcast.demo.server;
+package com.tjlcast.sample.server;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 

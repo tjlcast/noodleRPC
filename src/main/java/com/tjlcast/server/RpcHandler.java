@@ -18,7 +18,7 @@ public class RpcHandler extends SimpleChannelInboundHandler<RpcRequest> {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(RpcHandler.class) ;
 
-    private final Map<String, Object> handlerMap ;
+    private final Map<String, Object> handlerMap ;      // 接口映射表
 
     public RpcHandler(Map<String, Object> handlerMap) {
         this.handlerMap = handlerMap ;

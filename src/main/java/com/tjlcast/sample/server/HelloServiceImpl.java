@@ -1,6 +1,6 @@
-package com.tjlcast.demo.server;
+package com.tjlcast.sample.server;
 
-import com.tjlcast.demo.common.HelloService;
+import com.tjlcast.sample.common.HelloService;
 import com.tjlcast.server.RpcService;
 
 /**

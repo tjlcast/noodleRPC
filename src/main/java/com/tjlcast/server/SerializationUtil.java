@@ -14,6 +14,8 @@ import java.util.concurrent.ConcurrentHashMap;
  * Created by tangjialiang on 2018/5/3.
  *
  * base on protostuff to seria obj.
+ *
+ * obj 2 byte[]
  */
 public class SerializationUtil {
 

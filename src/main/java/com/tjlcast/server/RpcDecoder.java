@@ -21,6 +21,7 @@ public class RpcDecoder extends ByteToMessageDecoder {
     protected void decode(ChannelHandlerContext ctx, ByteBuf in, List<Object> out) throws Exception {
         // 首先获取到数据的长度
         if (in.readableBytes() < 4) {
+            // 等待数据头(长度)
             return ;
         }
         in.markReaderIndex() ;
